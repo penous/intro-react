@@ -33,21 +33,29 @@ function App() {
   }, [todos])
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container grid-sm">
+      <header className="bg-gray" >
+        <h1 className="text-center" >TODO LIST</h1>
       </header>
+
+      {/* Input field */}
+      <div className="input-group">
+        <input ref={todoValue} className="form-input" type="text" id="input-example-1" placeholder="Name" />
+        <button onClick={handleTodo} className="btn input-group-btn btn-p">Post</button>
+      </div>
+      <br />
+
+      {/* Todo panel */}
+      <div className="panel">
+        <div className="panel-header">
+          <div className="panel-title">TODOS</div>
+        </div>
+        <div className="panel-body">
+          <TodoList todoList={todos} toggleTodo={toggleTodo} />
+        </div>
+        <div className="panel-footer">
+        </div>
+      </div>
     </div>
   );
 }
