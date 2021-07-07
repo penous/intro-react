@@ -1,6 +1,8 @@
 import './App.css';
 import React, { useState, useRef, useEffect } from 'react'
-import TodoList from './components/TodoList';
+import Panel from './components/Panel';
+import Form from './components/Form';
+import Header from './components/Header';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
@@ -34,28 +36,11 @@ function App() {
 
   return (
     <div className="container grid-sm">
-      <header className="bg-gray" >
-        <h1 className="text-center" >TODO LIST</h1>
-      </header>
+      <Header />
 
-      {/* Input field */}
-      <div className="input-group">
-        <input ref={todoValue} className="form-input" type="text" id="input-example-1" placeholder="Name" />
-        <button onClick={handleTodo} className="btn input-group-btn btn-p">Post</button>
-      </div>
-      <br />
+      <Form todoValue={todoValue} handleTodo={handleTodo} />
+      <Panel todos={todos} toggleTodo={toggleTodo} />
 
-      {/* Todo panel */}
-      <div className="panel">
-        <div className="panel-header">
-          <div className="panel-title">TODOS</div>
-        </div>
-        <div className="panel-body">
-          <TodoList todoList={todos} toggleTodo={toggleTodo} />
-        </div>
-        <div className="panel-footer">
-        </div>
-      </div>
     </div>
   );
 }
