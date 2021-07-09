@@ -29,4 +29,5 @@ header {
 
 .form-size {
   width: 40%;
+  cursor: move;
 }

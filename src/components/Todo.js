@@ -13,7 +13,7 @@ const Todo = ({
     toggleTodo(todo.id);
   };
 
-  const dragStart = (e, todo) => {
+  const dragStart = (e) => {
     // Get innerHtml
     let innerHtml = e.target.children[0].innerHTML;
     // Set state
@@ -34,12 +34,11 @@ const Todo = ({
 
   const dragDrop = (e) => {
     e.preventDefault();
-
     // Update Todos
     setTodos(dragnDrop.newList);
   };
 
-  const dragOver = (e, todo) => {
+  const dragOver = (e) => {
     e.preventDefault();
     const newList = [...todoList];
 
@@ -58,18 +57,15 @@ const Todo = ({
   const dragEnd = () => {
     // Set style again to show it
     dragnDrop.div.style.border = 'none';
-    const draggedItem = todoList[dragnDrop.targetPosition];
     dragnDrop.div.children[0].innerHTML = dragnDrop.innerHtml;
-    console.log(dragnDrop);
-    console.log(draggedItem);
   };
 
   return (
     <div
       draggable='true'
-      onDragStart={(e) => dragStart(e, todo)}
-      onDrop={(e) => dragDrop(e, todo)}
-      onDragOver={(e) => dragOver(e, todo)}
+      onDragStart={(e) => dragStart(e)}
+      onDrop={(e) => dragDrop(e)}
+      onDragOver={(e) => dragOver(e)}
       onDragEnd={(e) => dragEnd()}
       className='form-group form-size'
     >
