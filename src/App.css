@@ -17,3 +17,16 @@ header {
 .btn-p {
   padding: 0 60px;
 }
+
+.on-drag:hover {
+  cursor: move;
+}
+
+.burger {
+  margin-top: 5px;
+  cursor: move;
+}
+
+.form-size {
+  width: 40%;
+}
