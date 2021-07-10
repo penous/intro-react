@@ -5,7 +5,7 @@
 ## Practical Information
 
 - Repository: `intro-react`
-- Link:
+- Link: https://toms-great-deluxe-todo.netlify.app/
 
 ## What is the React todo app?
 
