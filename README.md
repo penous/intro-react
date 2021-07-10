@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e26874d8-dc92-4e11-8f02-b144d9729874/deploy-status)](https://app.netlify.com/sites/toms-great-deluxe-todo/deploys)
+
 # Getting Started with Create React App
 
 ## Practical Information
