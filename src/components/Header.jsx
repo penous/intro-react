@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <Fragment>
       <header className="bg-gray" >
-        <h1 className="text-center" >TODO LIST</h1>
+        <h1 className="text-center" >YOU°DO</h1>
       </header>
     </Fragment>
   )
